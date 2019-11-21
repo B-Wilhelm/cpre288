@@ -1,0 +1,111 @@
+/// Simple 'Hello, world' program
+/**
+ * This program prints "Hello, world" to the LCD screen
+ * @author Chad Nelson
+ * @date 06/26/2012
+ *
+ * updated: phjones 9/3/2019
+ * Describtion: Added timer_init call, and including Timer.h
+ */
+
+#include "Timer.h"
+#include "lcd.h"
+#include "open_interface.h"
+#include "move.h"
+
+
+
+void main() {
+
+
+    //move_forward(oi_t *sensor, int centi)
+    //turn_clockwise(oi_init, 1000);
+
+    oi_t *sensor_data = oi_alloc();
+    oi_init(sensor_data);
+
+    int x = sensor_data->bumpLeft;
+    int y= sensor_data->bumpRight;
+
+
+
+    //while(x!=1 &&y!=1){
+    //move_forward(sensor_data, 900);
+
+//    }
+while(x!=1 &&y!=1){
+   move_forward(sensor_data, 900);
+
+   }
+
+    oi_init(sensor_data);
+    x = sensor_data->bumpLeft;
+    y= sensor_data->bumpRight;
+        if(x==1){
+
+            oi_setWheels(0, 0);
+
+
+            move_forward(sensor_data, -15);
+
+
+            turn_counterclockwise(sensor_data, 70);
+
+
+            move_forward(sensor_data, 25);
+
+
+            turn_clockwise(sensor_data, 70);
+
+
+            move_forward(sensor_data,15);
+x=0;
+        }
+        if(y==1){
+                oi_setWheels(0, 0);
+
+                move_forward(sensor_data, -15);
+
+                turn_clockwise(sensor_data, 70);
+
+
+                move_forward(sensor_data, 25);
+
+                turn_counterclockwise(sensor_data, 70);
+
+
+                move_forward(sensor_data,15);
+y=0;
+            }
+
+
+}
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// lcd_puts("Hello, world");// Replace lcd_printf with lcd_puts
+                                 // step through in debug mode
+                                 // and explain to TA how it
+                                 // works
+
+
+    
+	// NOTE: It is recommended that you use only lcd_init(), lcd_printf(), lcd_putc, and lcd_puts from lcd.h.
+    // NOTE: For time fuctions see Timer.h
+
+

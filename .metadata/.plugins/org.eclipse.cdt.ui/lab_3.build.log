@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project lab_3 ****
+
+"C:\\ti\\ccs910\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+gmake[1]: 'lab_3.out' is up to date.
+
+**** Build Finished ****

@@ -1,0 +1,94 @@
+#include "open_interface.h"
+#include "Timer.h"
+#include "lcd.h"
+
+
+void move_Back(oi_t *sensor_data, int centi){
+
+    double sum = 0;
+        oi_setWheels(-250, -250); // move forward; full speed
+
+             while (sum < centi) {
+                 oi_update(sensor_data);
+                 sum = sensor_data->distance;
+
+             }
+
+
+             oi_setWheels(0, 0); // stop
+             timer_waitMillis(300);
+}
+void move_forward(oi_t *sensor_data, int centi){
+
+    double sum = 0;
+        oi_setWheels(250, 250); // move forward; full speed
+
+             while (sum < centi) {
+                 oi_update(sensor_data);
+                 sum += sensor_data->distance;
+                oi_init(sensor_data);
+                 int x = sensor_data->bumpLeft;
+                 int y= sensor_data->bumpRight;
+             if(x !=0 || y!=0){
+                 return 0;
+             }
+             }
+
+             oi_setWheels(0, 0); // stop
+             timer_waitMillis(300);
+}
+
+
+
+void turn_clockwise(oi_t *sensor_data, int degrees){
+
+    int turn_distance;
+            double sum2 = 0;
+
+
+            oi_setWheels(-250,250);
+
+            while (sum2 < degrees) {
+                     oi_update(sensor_data);
+                     sum2 -= sensor_data->angle;
+                 }
+            oi_setWheels(0, 0); // stop
+            timer_waitMillis(300);
+}
+
+void turn_counterclockwise(oi_t *sensor_data, int degrees){
+
+    int turn_distance;
+            double sum2 = 0;
+
+
+            oi_setWheels(250,-250);
+
+            while (sum2 < degrees) {
+                     oi_update(sensor_data);
+                     sum2 += sensor_data->angle;
+                 }
+            oi_setWheels(0, 0); // stop
+            timer_waitMillis(300);
+}
+
+int sum_move_forward(oi_t *sensor_data, int centi, int* sum){
+
+    sum = 0;
+        oi_setWheels(250, 250); // move forward; full speed
+
+             while (sum < centi) {
+                 oi_update(sensor_data);
+                 sum +=sensor_data->distance;
+                oi_init(sensor_data);
+                 int x = sensor_data->bumpLeft;
+                 int y= sensor_data->bumpRight;
+             if(x !=0 || y!=0){
+                 return 0;
+             }
+             }
+
+             oi_setWheels(0, 0); // stop
+             timer_waitMillis(300);
+}
+
