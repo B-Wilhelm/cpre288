@@ -9,6 +9,7 @@
 #include "adc2.h"
 #include "open_interface.h"
 #include "move.h"
+#include "parts.h" //need to make 
 
 
 struct object{
@@ -29,21 +30,19 @@ int main(void){
     TIMER3B_init();
     bot_init();
 
-    // runs the object detection function
-    //obj_det();
+    
     oi_t *sensor_data = oi_alloc();
     oi_init(sensor_data);
 
-//    while(1){
-//        oi_update(sensor_data);
-//        move_forward(sensor_data, 10);
-//    }
+    while(1){
+        oi_update(sensor_data);
+        move_forward(sensor_data, 10);
+    }
 	
 	
-	//part one
-	part_one():
-	part_two();
-	Pert_three();
+	part1():
+	part2();
+	part3();
 }
 
 
