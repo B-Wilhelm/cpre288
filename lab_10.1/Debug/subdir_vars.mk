@@ -1,0 +1,104 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../tm4c123gh6pm.cmd 
+
+LIB_SRCS += \
+../libcybotUART.lib 
+
+C_SRCS += \
+../TIMER3B.c \
+../Timer.c \
+../adc.c \
+../adc2.c \
+../button.c \
+../lcd.c \
+../main.c \
+../move.c \
+../open_interface.c \
+../parts.c \
+../servo.c \
+../tm4c123gh6pm_startup_ccs.c \
+../uart.c 
+
+C_DEPS += \
+./TIMER3B.d \
+./Timer.d \
+./adc.d \
+./adc2.d \
+./button.d \
+./lcd.d \
+./main.d \
+./move.d \
+./open_interface.d \
+./parts.d \
+./servo.d \
+./tm4c123gh6pm_startup_ccs.d \
+./uart.d 
+
+OBJS += \
+./TIMER3B.obj \
+./Timer.obj \
+./adc.obj \
+./adc2.obj \
+./button.obj \
+./lcd.obj \
+./main.obj \
+./move.obj \
+./open_interface.obj \
+./parts.obj \
+./servo.obj \
+./tm4c123gh6pm_startup_ccs.obj \
+./uart.obj 
+
+OBJS__QUOTED += \
+"TIMER3B.obj" \
+"Timer.obj" \
+"adc.obj" \
+"adc2.obj" \
+"button.obj" \
+"lcd.obj" \
+"main.obj" \
+"move.obj" \
+"open_interface.obj" \
+"parts.obj" \
+"servo.obj" \
+"tm4c123gh6pm_startup_ccs.obj" \
+"uart.obj" 
+
+C_DEPS__QUOTED += \
+"TIMER3B.d" \
+"Timer.d" \
+"adc.d" \
+"adc2.d" \
+"button.d" \
+"lcd.d" \
+"main.d" \
+"move.d" \
+"open_interface.d" \
+"parts.d" \
+"servo.d" \
+"tm4c123gh6pm_startup_ccs.d" \
+"uart.d" 
+
+C_SRCS__QUOTED += \
+"../TIMER3B.c" \
+"../Timer.c" \
+"../adc.c" \
+"../adc2.c" \
+"../button.c" \
+"../lcd.c" \
+"../main.c" \
+"../move.c" \
+"../open_interface.c" \
+"../parts.c" \
+"../servo.c" \
+"../tm4c123gh6pm_startup_ccs.c" \
+"../uart.c" 
+
+
