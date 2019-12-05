@@ -22,6 +22,7 @@ struct object object_storage[12];
 void part1(void){
     oi_t *sensor_data = oi_alloc();
     oi_init(sensor_data);
+
     int closest_obj;
     int flag = flag_status();
     int i;
@@ -100,6 +101,15 @@ void narrow_only(void){ //points towards narrow object
     }
 }
 void multi_obj(void){
+
+    int closest_obj;
+    int flag = flag_status();
+    int i;
+    int j;
+    oi_t *sensor_data = oi_alloc();
+    oi_init(sensor_data);
+
+
     for(i=0;i<(sizeof(object_storage)-1);i++){
         if( object_storage[i].size == 0){
             turn_counterclockwise(sensor_data,90-object_storage[i].angle);

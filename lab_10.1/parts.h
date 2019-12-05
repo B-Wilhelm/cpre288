@@ -8,6 +8,6 @@ void part3(void);
 int flag_status(void);
 void object_description();
 void narrow_only(void);
-
+void multi_obj(void);
 
 #endif
